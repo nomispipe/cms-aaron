@@ -1,0 +1,91 @@
+#workshops {
+  .level {
+    position: relative;
+    margin-top: 100px;
+    padding-left: 16px;
+    background-color: var(--dark-light);
+    display: flex;
+    img {
+        align-self: center;
+        width: 50px;
+        height: 50px;
+      }
+    .symbol {
+      top: -55px;
+      position: absolute;
+      left: 0; 
+      right: 0; 
+      margin-left: auto; 
+      margin-right: auto; 
+        width: fit-content;
+      .image-container {
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+        padding: 24px;
+        border-radius: 50%;
+        background-color: var(--grey-dark);
+        img {
+       
+          width: 67px;
+          height: 67px;
+        }
+
+        .counter{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            top: -10px;
+            right: -10px;
+            position: absolute;
+            background-color: var(--grey);
+            width: 35px;
+            height: 35px;
+            z-index: -1;
+            p{
+                @include ssp-semi-bold(var(--primary-dark), 26px);
+            }
+        }
+      }
+    }
+    .content {
+    width: 100%;
+      display: flex;
+      margin-top: 80px;
+      flex-direction: column;
+      p {
+        @include ssp-light(var(--white), 16px);
+        line-height: 20px;
+        padding-bottom: 20px;
+      }
+
+      h3{
+       
+        padding-bottom: 10px;
+      }
+
+      blockquote{
+        align-self: center;
+        @include ssp-light(var(--white), 22px);
+        padding-bottom: 35px;
+      }
+    }
+
+    .aside {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      background-color: var(--grey-light);
+      p {
+        @include ssp-extra-light(var(--dark), 18px);
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+        transform: rotate(180deg);
+        padding-top: 15px;
+        padding-left: 10px;
+        padding-right: 5px;
+      }
+    }
+  }
+}
