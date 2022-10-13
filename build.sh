@@ -5,4 +5,3 @@ cp ./src/index.html ./dist/
 cp -R ./src/images ./dist/
 cp -R ./src/fonts ./dist/
 npx esbuild ./src/js/main.js --bundle --outfile=./dist/main.js  --minify
-
