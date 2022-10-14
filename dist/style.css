@@ -232,6 +232,7 @@ header .cta h2 {
   position: relative;
   margin-top: 100px;
   padding-left: 16px;
+  padding-right: 16px;
   background-color: var(--dark-light);
   display: flex;
 }
