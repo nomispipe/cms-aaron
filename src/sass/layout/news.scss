@@ -4,6 +4,19 @@
     padding-right: 16px;
     display: flex;
     flex-direction: column;
+
+    
+
+    .article-container{
+        @include breakpoint($mobile) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap:  wrap;
+            justify-content: space-evenly;
+            padding-bottom: 100px;
+        }
+    }
+    
     article{
         max-width: 420px;
         align-self: center;
@@ -14,8 +27,9 @@
             padding: 10px 16px;
         }
         img{
+            object-fit: cover;
             width: 100%;
-            max-height: auto;
+            height: 300px;
         }
         .content{
             padding: 0 16px;

@@ -164,6 +164,13 @@ footer {
   padding-left: 16px;
   padding-top: 12px;
   padding-bottom: 30px;
+  padding-right: 16px;
+}
+@media (min-width: 37.4375rem) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 footer h4 {
   font-family: "Source Sans Pro";
@@ -335,9 +342,26 @@ header .cta h2 {
   padding-bottom: 55px;
   padding-top: 62px;
 }
+@media (min-width: 37.4375rem) {
+  #about {
+    display: flex;
+  }
+}
+@media (min-width: 37.4375rem) {
+  #about .content-container {
+    width: 50%;
+  }
+}
 #about img {
   max-width: 100%;
   height: auto;
+}
+@media (min-width: 37.4375rem) {
+  #about img {
+    width: 50%;
+    object-fit: cover;
+    padding-left: 36px;
+  }
 }
 #about .title {
   padding-top: 20px;
@@ -350,6 +374,7 @@ header .cta h2 {
   padding-right: 16px;
 }
 #about .content p {
+  max-width: 600px;
   padding-bottom: 10px;
   line-height: 30px;
 }
@@ -362,6 +387,15 @@ header .cta h2 {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 37.4375rem) {
+  #news .article-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 100px;
+  }
+}
 #news article {
   max-width: 420px;
   align-self: center;
@@ -373,8 +407,9 @@ header .cta h2 {
   padding: 10px 16px;
 }
 #news article img {
+  object-fit: cover;
   width: 100%;
-  max-height: auto;
+  height: 300px;
 }
 #news article .content {
   padding: 0 16px;
