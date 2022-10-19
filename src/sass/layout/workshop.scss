@@ -1,38 +1,29 @@
-#workshops {
-  .level {
-    position: relative;
-    margin-top: 100px;
-    padding-left: 16px;
-    padding-right: 16px;
-    background-color: var(--dark-light);
-    display: flex;
-    img {
+@include breakpoint(0, $mobile){
+  #workshops{
+    .level {
+      margin-top: 100px;
+      display: flex;
+      background-color: var(--dark-light);
+      img {
         align-self: center;
         width: 50px;
         height: 50px;
-      }
-    .symbol {
-      top: -55px;
-      position: absolute;
-      left: 0; 
-      right: 0; 
-      margin-left: auto; 
-      margin-right: auto; 
-        width: fit-content;
-      .image-container {
-        position: relative;
-        width: fit-content;
-        height: fit-content;
-        padding: 24px;
-        border-radius: 50%;
-        background-color: var(--grey-dark);
-        img {
-       
-          width: 67px;
-          height: 67px;
         }
-
-        .counter{
+      .symbol {
+        top: -55px;
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+        .image-container {
+          position: relative;
+          img {
+            width: 67px;
+            height: 67px;
+          }
+  
+          .counter{
             display: flex;
             justify-content: center;
             align-items: center;
@@ -47,14 +38,98 @@
             p{
                 @include ssp-semi-bold(var(--primary-dark), 26px);
             }
+          }
+        }
+      }
+      .content {
+        display: flex;
+        margin-top: 80px;
+        flex-direction: column;
+      }
+  
+      .aside {
+        p {
+          writing-mode: vertical-lr;
+          text-orientation: mixed;
+          transform: rotate(180deg);
         }
       }
     }
-    .content {
-    width: 100%;
+  }
+}
+@include breakpoint($desktop, $max-width){
+  #workshops{
+    .grid{
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+    .level {
       display: flex;
-      margin-top: 80px;
-      flex-direction: column;
+      flex-direction: row;
+      margin-left: 8vw;
+      margin-top: 40px;
+      .quotemarks {
+        position: absolute;
+        bottom: 0;
+        right: 20vw;
+        width: 120px;
+        height: 120px;
+        }
+      .symbol {
+        position: absolute;
+        left: 37vw;
+        align-self: center;
+        .image-container {
+          img {
+            width: 10vw;
+            height: 10vw;
+          }
+  
+          .counter{
+            border-radius: 50%;
+            left: -44vw;
+            position: absolute;
+            p{
+                @include ssp-semi-bold(var(--dark-light), 18rem);
+            }
+          }
+        }
+      }
+      .content {
+        background-color: var(--dark-light);
+        padding: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 20vw;
+        p {
+          max-width: 30vw;
+        }
+      }
+  
+      .aside {
+        margin: 0 20px 0 20px;
+        width: 20vw;
+      }
+    }
+  }
+}
+#workshops {
+  .level {
+    position: relative;
+    padding-left: 16px;
+    .symbol {
+      width: fit-content;
+      .image-container {
+        width: fit-content;
+        height: fit-content;
+        padding: 24px;
+        border-radius: 50%;
+        background-color: var(--grey-dark);
+      }
+    }
+    .content {
+      width: 100%;
       p {
         @include ssp-light(var(--white), 16px);
         line-height: 20px;
@@ -80,9 +155,6 @@
       background-color: var(--grey-light);
       p {
         @include ssp-extra-light(var(--dark), 18px);
-        writing-mode: vertical-lr;
-        text-orientation: mixed;
-        transform: rotate(180deg);
         padding-top: 15px;
         padding-left: 10px;
         padding-right: 5px;

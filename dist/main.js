@@ -1,1 +1,1 @@
-(()=>{var t=Object.defineProperty;var r=(o,n)=>{for(var a in n)t(o,a,{get:n[a],enumerable:!0})};var i={};r(i,{init:()=>f});function f(){}window.MainNav=i;})();
+(()=>{var i=Object.defineProperty;var n=(s,e)=>{for(var t in e)i(s,t,{get:e[t],enumerable:!0})};var o={};n(o,{init:()=>a});function a(){let s=document.getElementById("hamburger");s.addEventListener("click",e=>{console.log(s.classList),s.classList.contains("closed")?(s.classList.add("open"),s.classList.remove("closed")):(s.classList.add("closed"),s.classList.remove("open"))})}window.MainNav=o;})();

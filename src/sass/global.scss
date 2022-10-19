@@ -22,18 +22,33 @@ section{
   align-items: center;
   padding: 0 20px;
 }
-p{
-  @include ssp-light(var(--dark),16px);
-}
-h2{
-  @include ssp-light( var(--primary-dark),28px);
-}
-.super-headline{
-  @include ssp-semi-bold( var(--dark-light),16px);
-  
-}
-h3{
-  @include ssp-light(var(--primary-dark), 22px );
 
- 
+@include breakpoint(0, $mobile){
+  p{
+    @include ssp-light(var(--dark),16px);
+  }
+  h2{
+    @include ssp-light( var(--primary-dark), 28px);
+  }
+  .super-headline{
+    @include ssp-semi-bold( var(--dark-light),16px);
+  }
+  h3{
+    @include ssp-light(var(--primary-dark), 22px );
+  }
+}
+@include breakpoint($desktop, $max-width){
+  p{
+    @include ssp-light(var(--dark),1rem);
+  }
+  h2{
+    @include ssp-light( var(--primary-dark), 3.5rem);
+  }
+  .super-headline{
+    @include ssp-semi-bold( var(--dark-light),1rem);
+    text-transform: uppercase;
+  }
+  h3{
+    @include ssp-light(var(--primary-dark), 2.5rem );
+  }
 }

@@ -1,28 +1,43 @@
-
-
+@include breakpoint(0, $mobile){
+    header{
+        background-position: center center; 
+        height: 558px;
+        background-image: url(../../images/intro.jpg);
+        flex-direction: column;
+        .cta{
+            right: 20px;
+            top: 300px;
+        }
+    }
+}
+@include breakpoint($desktop, $max-width){
+    header{
+        background-position: right top; 
+        height: 95vh;
+        background-image: url(../../images/intro2.jpg);
+        flex-direction: row;
+        .cta{
+            left: 15vw;
+            top: 35vh;
+        }
+    }
+}
 header{
-    display: flex;
     padding-top: 11px;
     padding-left: 16px;
-    background-image: url(../../images/intro.jpg);
     background-size: cover;
-    background-repeat:   no-repeat;
-    background-position: center center; 
-    height: 558px;
-    flex-direction: column;
-
+    background-repeat: no-repeat;
     h1{
-        
+        margin-left: 10px;
         @include ssp-semi-bold(white,16px);
         span{
-            @include ssp-light(white,16px);
+            @include ssp-light(rgb(143, 143, 143),16px);
         }
     }
 
     .cta{
-        margin-top: 270px;
-        margin-right: 50px;
-        align-self: flex-end;
+        position: absolute;
+        width: fit-content;
         h2{
             margin: 10px 0;
             @include ssp-light(var(--primary-dark),38px);
