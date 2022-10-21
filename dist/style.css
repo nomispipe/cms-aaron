@@ -226,7 +226,7 @@ h3 {
   #hamburger .line-2 {
     top: 8px;
     width: 75%;
-    right: -5px;
+    right: -12px;
   }
   #hamburger.open .line-1 {
     transform: rotate(45deg);
