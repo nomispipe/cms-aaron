@@ -1,4 +1,5 @@
 export function init() {
+ 
     const button = document.getElementById('hamburger')
 
     button.addEventListener("click", e => {

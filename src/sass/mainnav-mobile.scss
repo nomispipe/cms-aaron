@@ -1,32 +1,29 @@
 @include breakpoint(0, $mobile) {
+
+
     #mainnav {
         position: fixed;
-        width: 100%;
-        background-color: #363636;
         right: 0;
         top: 0;
-        z-index: 10;
-        ul {
-            display: flex;
-            flex-wrap: nowrap;
-            align-items: flex-end;
-            flex-direction: column;
-            gap: 1.5rem;
-            max-width: 15rem;
-            padding: 4rem 1rem 1rem 1rem;
-            width: 100%;
-            position: fixed;
-            right: 0;
-            top: 0;
-            box-shadow: -5px 0 10px 0 rgb(0 0 0 / 0.1);
-            background-color: #363636;
-            height: 100vh;
+        padding: 1rem;
+        width: 100%;
+    }
+    ul {
+        position: fixed;
+        padding: 3rem 1rem 1rem 1rem;
+        width: 75vw;
+        box-shadow: -5px 0 10px 0 rgb(0 0 0 / 0.1);
+        top: 0;
+        right: 0;
+        background-color:  var(--dark-light);
+        height: 100vh;
+        text-align: right;
+        li{
+            padding-top: 25px;
             a{
-                color: white;
-                list-style-type: none;
-                text-decoration: none;
-                font-size: 18px;
-            }
-        }
+             @include ssp-light(var(--white),22px);
+            } 
+         }
     }
 }
+
