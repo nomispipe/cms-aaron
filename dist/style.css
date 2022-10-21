@@ -518,6 +518,7 @@ header .cta h2 {
 }
 @media (min-width: 78.125rem) {
   #workshops .level {
+    padding: 0;
     margin-top: 0;
     flex-direction: row;
     padding-left: 0;
